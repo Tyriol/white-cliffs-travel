@@ -4,7 +4,6 @@ import background from '../assets/background.svg';
 ---
 
 <div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<header>
 		<p class="site-title">White Cliffs Travel</p>
 		<nav>
@@ -44,6 +43,7 @@ import background from '../assets/background.svg';
 	#container {
 		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 		height: 100%;
+		width: 100dvw;
 	}
 
 	header {
@@ -67,18 +67,26 @@ import background from '../assets/background.svg';
 	}
 
 	main {
-		width: 100dvw;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		justify-content: center;
-		padding: 0 3rem;
+	}
+
+	footer {
+		padding: 0 2rem;
 	}
 
 	#hero {
 		display: flex;
-		align-items: start;
+		align-items: center;
 		flex-direction: column;
 		justify-content: center;
+		height: 70dvh;
+		width: 100%;
+		background-image: url(../assets/white-cliffs-trimmed.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	h1 {
