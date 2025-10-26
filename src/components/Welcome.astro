@@ -7,9 +7,9 @@ import whiteCliffsHero from '../assets/white-cliffs-trimmed.jpg';
 		<p class="site-title">White Cliffs Travel</p>
 		<nav>
 			<ul class="header-nav">
-				<li>Deals</li>
-				<li>Blog</li>
-				<li><button class="contact-btn">Contact Me</button></li>				
+				<li class="nav-link">Deals</li>
+				<li class="nav-link">Blog</li>
+				<li><button class="contact-btn">Book your consultation</button></li>				
 			</ul>
 		</nav>
 	</header> 
@@ -17,7 +17,7 @@ import whiteCliffsHero from '../assets/white-cliffs-trimmed.jpg';
 		<section id="hero">
 			<h1>White Cliffs Travel</h1>
 			<p>Your Adventure Awaits</p>
-			<button class="contact-btn">Contact Me</button>
+			<button class="contact-btn">Book your consultation</button>
 		</section>
 		<section id="featured-deals">
 			<div>
@@ -65,7 +65,7 @@ import whiteCliffsHero from '../assets/white-cliffs-trimmed.jpg';
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 2rem;
+		height: 2.5rem;
 		gap: 1rem;
 	}
 
@@ -73,19 +73,26 @@ import whiteCliffsHero from '../assets/white-cliffs-trimmed.jpg';
 		padding: 0;
 	}
 
-	.header-nav > li {
-		height: 2rem;
+	.nav-link {
+		height: 2.5rem;
 		width: 4rem;
 		font-weight: 500;
 		align-content: center;
+		text-align: center;
 		font-size: 1rem;
+	}
+
+	.nav-link:hover {
+		box-shadow:2px 2px 5px black;
+		border-radius: 0.5rem;
 	}
 
 	.header-nav > li:last-of-type {
 		width: auto;
 	}
 	.contact-btn {
-		height: 2rem;
+		transition: all 0.25s;
+		height: 2.5rem;
 		width: 14rem;
 		font-weight: 600;
 		border-radius: 0.5rem;
@@ -97,7 +104,8 @@ import whiteCliffsHero from '../assets/white-cliffs-trimmed.jpg';
 
 	.contact-btn:hover {
 		transition: all 0.25s;
-		background-color: #FFE7CF;
+		/* border: 1px solid #4A4947; */
+		box-shadow:2px 2px 5px black;
 		color: #4A4947;
 	}
 
