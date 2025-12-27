@@ -1,5 +1,5 @@
 ---
-import whiteCliffsHero from '../assets/gem-wct.png';
+// import whiteCliffsHero from "../assets/gem-wct.png"
 ---
 
 <div id="container">
@@ -20,8 +20,38 @@ import whiteCliffsHero from '../assets/gem-wct.png';
 			<button class="contact-btn">Book your consultation</button>
 		</section>
 		<section id="featured-deals">
-			<div>
-				<h2>Deals</h2>
+			<h2>Deals</h2>
+			<div class="deals-grid">
+				<article>
+					<img class="deal-img" src="src/assets/white-cliffs.jpg" alt="White Cliffs" />
+					<h3>White Cliffs</h3>
+					<p class="price">£1000</p>
+					<p class="deal-description">Explore the remarkable white Cliffs</p>
+				</article>
+				<article>
+					<img class="deal-img" src="src/assets/white-cliffs.jpg" alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src="src/assets/white-cliffs.jpg" alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src="src/assets/white-cliffs.jpg" alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src="src/assets/white-cliffs.jpg" alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src="src/assets/white-cliffs.jpg" alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src="src/assets/white-cliffs.jpg" alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src="src/assets/white-cliffs.jpg" alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src="src/assets/white-cliffs.jpg" alt="White Cliffs" />
+				</article>
 			</div>
 		</section>
 	</main>
@@ -146,6 +176,35 @@ import whiteCliffsHero from '../assets/gem-wct.png';
 		font-weight: 500;
 	}
 
+	#featured-deals {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #DDD5CA;
+		padding: 3rem 0;
+	}
+
+	.deals-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 3rem;
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 2rem;
+	}
+
+	.deals-grid > article {
+		background-color: #fff;
+		padding: 0.75rem;
+		border-radius: 0.5rem;
+	}
+
+	.deal-img {
+		width: 100%;
+		aspect-ratio: 1;
+	}
+
 	#links {
 		display: flex;
 		gap: 16px;
@@ -240,7 +299,6 @@ import whiteCliffsHero from '../assets/gem-wct.png';
 	#news:hover {
 		background: rgba(255, 255, 255, 0.55);
 	}
-
 	@media screen and (max-width: 768px) {
 		#container {
 			display: flex;
