@@ -1,0 +1,10 @@
+---
+const {img, alt, title, price, description} = Astro.props;
+---
+
+<article>
+    <img class="deal-img" src={img} alt={alt} />
+    <h3>{title}</h3>
+    <p class="price">£{price}</p>
+    <p class="deal-description">{description}</p>
+</article>
