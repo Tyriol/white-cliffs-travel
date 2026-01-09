@@ -1,0 +1,59 @@
+<header>
+		<p class="site-title">White Cliffs Travel</p>
+		<nav>
+			<ul class="header-nav">
+				<li class="nav-link">Deals</li>
+				<li class="nav-link">Blog</li>
+				<li><button class="contact-btn">Book your consultation</button></li>				
+			</ul>
+		</nav>
+	</header> 
+
+    <style>
+        header {
+            height: 6rem;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* box-shadow:5px 5px 10px black; */
+	    }       
+
+        .site-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .header-nav {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 2.5rem;
+            gap: 1rem;
+        }
+
+        .header-nav ul {
+            padding: 0;
+        }
+
+        .nav-link {
+            transition: all 0.25s;
+            height: 2.5rem;
+            width: 4rem;
+            font-weight: 500;
+            align-content: center;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .nav-link:hover {
+            transition: all 0.25s;
+            box-shadow:2px 2px 5px black;
+            border-radius: 0.5rem;
+        }
+
+        .header-nav > li:last-of-type {
+            width: auto;
+        }
+    </style>
