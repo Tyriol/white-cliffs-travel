@@ -1,6 +1,7 @@
 ---
 import whiteCliffsPlaceholder from "../assets/white-cliffs.jpg"
 import Header from "./Header.astro"
+import DealCard from "./DealCard.astro"
 ---
 
 <div id="container">
@@ -14,10 +15,10 @@ import Header from "./Header.astro"
 		<section id="featured-deals">
 			<h2>Deals</h2>
 			<div class="deals-grid">
-				
-				<article>
-					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
-				</article>
+				<div><DealCard img={whiteCliffsPlaceholder.src}, alt="A picture from the sea of the White Cliffs of Dover", title="White Cliffs", price=2, description="See the castle and france" /></div>
+				<div>
+					<DealCard img={whiteCliffsPlaceholder.src}, alt="A picture from the sea of the White Cliffs of Dover", title="White Cliffs", price=2, description="See the castle and france" />
+				</div>
 				<article>
 					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
 				</article>
@@ -89,12 +90,14 @@ import Header from "./Header.astro"
 	h1 {
 		font-size: 4rem;
 		margin: 0;
+		background-color: transparent;
 	}
 
 	#hero p {
 		font-size: 2rem;
 		font-style: italic;
 		font-weight: 500;
+		background-color: transparent;
 	}
 
 	#featured-deals {
@@ -109,9 +112,9 @@ import Header from "./Header.astro"
 	.deals-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+		grid-template-rows: auto(3, 1fr);
 		gap: 3rem;
-		width: 80%;
+		width: 80dvw;
 		margin: 0 auto;
 		margin-top: 2rem;
 	}
