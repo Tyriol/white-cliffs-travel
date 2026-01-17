@@ -15,8 +15,12 @@ import DealCard from "./DealCard.astro"
 		<section id="featured-deals">
 			<h2>Deals</h2>
 			<div class="deals-grid">
-				<!-- <DealCard img={whiteCliffsPlaceholder.src} alt="A picture from the sea of the White Cliffs of Dover" title="White Cliffs", price=2 description="See the castle and france" />
-				<DealCard img={whiteCliffsPlaceholder.src} alt="A picture from the sea of the White Cliffs of Dover" title="White Cliffs", price=2 description="See the castle and france" /> -->
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
 				<article>
 					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
 				</article>
@@ -110,7 +114,7 @@ import DealCard from "./DealCard.astro"
 	.deals-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: auto(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
 		gap: 3rem;
 		width: 80dvw;
 		margin: 0 auto;
