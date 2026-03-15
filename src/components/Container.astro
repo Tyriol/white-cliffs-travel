@@ -14,7 +14,7 @@ import DealCard from "./DealCard.astro"
 		</section>
 		<section id="featured-deals">
 			<h2>Deals</h2>
-			<div class="deals-grid">
+			<!-- <div class="deals-grid">
 				<article>
 					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
 				</article>
@@ -42,7 +42,7 @@ import DealCard from "./DealCard.astro"
 				<article>
 					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
 				</article>
-			</div>
+			</div> -->
 		</section>
 	</main>
 	<footer>
@@ -51,32 +51,29 @@ import DealCard from "./DealCard.astro"
 </div>
 
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-	}
-
 	#container {
 		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
 		height: 100%;
-		width: 100dvw;
 	}
+
 	main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		background-color: aqua;
+		padding: 2rem 0;
 	}
 
 	footer {
 		padding: 0 2rem;
+		background-color: brown;
 	}
 
-	#hero {
+	/* #hero {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -237,7 +234,6 @@ import DealCard from "./DealCard.astro"
 		}
 
 		#hero {
-			/* display: fle; */
 			padding-top: 10%;
 			padding-bottom:;
 			background-image: url(../assets/white-cliffs.jpg);
@@ -269,5 +265,5 @@ import DealCard from "./DealCard.astro"
 		h1 {
 			line-height: 1.5;
 		}
-	}
+	} */
 </style>
