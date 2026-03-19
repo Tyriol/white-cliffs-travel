@@ -1,106 +1,106 @@
 <header>
-		<p class="site-title">White Cliffs Travel</p>
-        <button popovertarget="site-nav-popover">
-            <svg viewBox="0 0 100 80" width="40" height="40">
-                <rect width="100" height="15"></rect>
-                <rect y="30" width="100" height="15"></rect>
-                <rect y="60" width="100" height="15"></rect>
+    <p class="site-title">White Cliffs Travel</p>
+    <button popovertarget="site-nav-popover">
+        <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="15"></rect>
+            <rect y="30" width="100" height="15"></rect>
+            <rect y="60" width="100" height="15"></rect>
+        </svg>
+    </button>
+    <nav popover="auto" id="site-nav-popover">
+        <button class="menu-cls-btn" popovertarget="site-nav-popover" popovertargetaction="hide">
+            <svg viewBox="0 0 100 80" width="40" height="40" aria-hidden="true">
+                <g transform="translate(50 40)">
+                    <rect x="-50" y="-7.5" width="100" height="15" transform="rotate(45)"></rect>
+                    <rect x="-50" y="-7.5" width="100" height="15" transform="rotate(-45)"></rect>
+                </g>
             </svg>
         </button>
-		<nav popover="auto" id="site-nav-popover">
-            <button class="menu-cls-btn" popovertarget="site-nav-popover" popovertargetaction="hide">
-		        <svg viewBox="0 0 100 80" width="40" height="40" aria-hidden="true">
-                    <g transform="translate(50 40)">
-                        <rect x="-50" y="-7.5" width="100" height="15" transform="rotate(45)"></rect>
-                        <rect x="-50" y="-7.5" width="100" height="15" transform="rotate(-45)"></rect>
-                    </g>
-                </svg>
-            </button>
-            <ul class="header-nav">
-				<li class="nav-link">Deals</li>
-				<li class="nav-link">Blog</li>
-				<li class="nav-link">Book your consultation</li>				
-			</ul>
-		</nav>
-	</header> 
+        <ul class="header-nav">
+            <li class="nav-link">Deals</li>
+            <li class="nav-link">Blog</li>
+            <li class="nav-link">Book your consultation</li>
+        </ul>
+    </nav>
+</header>
 
-    <style>
-        header {
-            height: 6rem;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-	    }   
-        
-        button {
-            border: none;
+<style>
+    header {
+        height: 6rem;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    button {
+        border: none;
+    }
+
+    .menu-cls-btn {
+        padding-left: 2rem;
+        padding-top: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .header-nav {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 2.5rem;
+        gap: 1rem;
+    }
+
+    #site-nav-popover[popover] {
+        transition:
+            display 0.3s allow-discrete,
+            overlay 0.5s allow-discrete,
+            opacity 0.3s,
+            translate 0.3s;
+        transition-timing-function: ease-in;
+        translate: 100%;
+        margin: 0;
+        block-size: 100vb;
+        inline-size: 100vi;
+        inset-inline-start: unset;
+        inset-inline-end: 0;
+        align-content: center;
+
+        &:popover-open {
+            translate: 0;
+            transition-timing-function: ease-out;
         }
 
-        .menu-cls-btn {
-            padding-left: 2rem;
-            padding-top: 1.5rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .header-nav {
-            list-style: none;
-            padding-left: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 2.5rem;
-            gap: 1rem;
-        }
-
-        #site-nav-popover[popover] {
-            transition:
-                display 0.3s allow-discrete,
-                overlay 0.5s allow-discrete,
-                opacity 0.3s,
-                translate 0.3s;
-            transition-timing-function: ease-in;
-            translate: 100%;
-            margin: 0;
-            block-size: 100vb;
-            inline-size: 100vi;
-            inset-inline-start: unset;
-            inset-inline-end: 0;
-            align-content: center;
-
+        @starting-style {
             &:popover-open {
-                translate: 0;
-                transition-timing-function: ease-out;
+                translate: 100%;
             }
-
-            @starting-style {
-                &:popover-open {
-                    translate: 100%;
-                }
-            }
-    	}      
-
-        .header-nav > li {
-            transition: all 0.25s;
-            font-size: 1.5rem;
-            height: 2.5rem;
-            width: 4rem;
-            font-weight: 500;
-            align-content: center;
-            text-align: center;
-            width: 100%;
         }
+    }
 
-        .nav-link:hover {
-            transition: all 0.25s;
-            box-shadow:2px 2px 5px black;
-            border-radius: 0.5rem;
-        }
+    .header-nav > li {
+        transition: all 0.25s;
+        font-size: 1.5rem;
+        height: 2.5rem;
+        width: 4rem;
+        font-weight: 500;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+    }
 
-        /* .header-nav > li:last-of-type {
-            width: auto;
-        } */
-    </style>
+    .nav-link:hover {
+        transition: all 0.25s;
+        box-shadow: 2px 2px 5px black;
+        border-radius: 0.5rem;
+    }
+
+    /* .header-nav > li:last-of-type {
+        width: auto;
+    } */
+</style>
