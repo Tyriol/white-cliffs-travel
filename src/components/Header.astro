@@ -1,10 +1,13 @@
-<header>
-    <p class="site-title">White Cliffs Travel</p>
-    <button popovertarget="site-nav-popover">
-        <svg viewBox="0 0 100 80" width="40" height="40">
-            <rect width="100" height="15"></rect>
-            <rect y="30" width="100" height="15"></rect>
-            <rect y="60" width="100" height="15"></rect>
+<header class="header">
+    <h1 class="site-title">
+        White Cliffs<br />
+        <span>Travel</span>
+    </h1>
+    <button class="hamburger-menu" popovertarget="site-nav-popover">
+        <svg class="hamburger-menu" viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="10"></rect>
+            <rect y="30" width="100" height="10"></rect>
+            <rect y="60" width="100" height="10"></rect>
         </svg>
     </button>
     <nav popover="auto" id="site-nav-popover">
@@ -25,21 +28,59 @@
 </header>
 
 <style>
-    header {
-        height: 6rem;
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+    .header {
+        position: relative;
+        height: 9rem;
         padding: 0 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #18304a;
+    }
+
+    .header::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 32px;
+        background: url("data:image/svg+xml;utf8,\<svg viewBox='0 0 1440 120' xmlns='http://www.w3.org/2000/svg'>\<path fill='%23f9f7f0' d='M0,30 C80,50 160,60 240,55 C320,50 400,70 480,65 C560,60 640,90 720,85 C800,80 880,60 960,65 C1040,70 1120,60 1200,55 C1280,50 1360,65 1440,60 L1440,120 L0,120 Z'/>\</svg>")
+            no-repeat;
+        background-size: 100% auto;
+    }
+
+    h1,
+    h1 > span {
+        font-family: 'Cinzel', serif;
+        color: white;
+        letter-spacing: 0.2rem;
+        font-weight: 500;
+        font-size: 1.75rem;
+        background-color: inherit;
+        text-align: center;
+    }
+
+    h1 > span {
+        color: #cfa982;
     }
 
     button {
         border: none;
     }
 
+    .hamburger-menu {
+        background-color: #18304a;
+    }
+
+    .hamburger-menu rect {
+        fill: #cfa982;
+    }
+
     .menu-cls-btn {
         padding-left: 2rem;
-        padding-top: 1.5rem;
+        padding-top: 2.75rem;
         position: absolute;
         top: 0;
         left: 0;
@@ -48,12 +89,13 @@
     .header-nav {
         list-style: none;
         padding-left: 0;
+        margin-bottom: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 2.5rem;
-        gap: 1rem;
+        gap: 0rem;
+        border-bottom: 1px solid black;
     }
 
     #site-nav-popover[popover] {
@@ -70,6 +112,7 @@
         inset-inline-start: unset;
         inset-inline-end: 0;
         align-content: center;
+        padding: 0;
 
         &:popover-open {
             translate: 0;
@@ -86,21 +129,17 @@
     .header-nav > li {
         transition: all 0.25s;
         font-size: 1.5rem;
-        height: 2.5rem;
-        width: 4rem;
+        height: 4rem;
+        width: 100%;
         font-weight: 500;
         align-content: center;
         text-align: center;
         width: 100%;
+        border-top: 1px solid black;
     }
 
-    .nav-link:hover {
+    .header-nav > li:hover {
         transition: all 0.25s;
-        box-shadow: 2px 2px 5px black;
-        border-radius: 0.5rem;
+        background-color: #9dacb3;
     }
-
-    /* .header-nav > li:last-of-type {
-        width: auto;
-    } */
 </style>

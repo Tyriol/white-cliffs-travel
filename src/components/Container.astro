@@ -1,20 +1,20 @@
 ---
-import whiteCliffsPlaceholder from "../assets/white-cliffs.jpg"
-import Header from "./Header.astro"
-import DealCard from "./DealCard.astro"
+import whiteCliffsPlaceholder from '../assets/white-cliffs.jpg';
+import Header from './Header.astro';
+import DealCard from './DealCard.astro';
 ---
 
 <div id="container">
-	<Header />
-	<main>
-		<section id="hero">
-			<h1>White Cliffs Travel</h1>
-			<p>Your Adventure Awaits</p>
-			<button class="contact-btn">Book your consultation</button>
-		</section>
-		<section id="featured-deals">
-			<h2>Deals</h2>
-			<!-- <div class="deals-grid">
+    <Header />
+    <main>
+        <section id="hero">
+            <h1>White Cliffs Travel</h1>
+            <p>Your Adventure Awaits</p>
+            <button class="contact-btn">Book your consultation</button>
+        </section>
+        <section id="featured-deals">
+            <h2>Deals</h2>
+            <!-- <div class="deals-grid">
 				<article>
 					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
 				</article>
@@ -43,37 +43,37 @@ import DealCard from "./DealCard.astro"
 					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
 				</article>
 			</div> -->
-		</section>
-	</main>
-	<footer>
-		<h3>Footer</h3>
-	</footer>
+        </section>
+    </main>
+    <footer>
+        <h3>Footer</h3>
+    </footer>
 </div>
 
 <style>
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		display: flex;
-		flex-grow: 1;
-		flex-direction: column;
-		height: 100%;
-	}
+    #container {
+        font-family:
+            Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        height: 100%;
+    }
 
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-color: aqua;
-		padding: 2rem 0;
-	}
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
+    }
 
-	footer {
-		padding: 0 2rem;
-		background-color: brown;
-	}
+    footer {
+        padding: 0 2rem;
+        background-color: brown;
+    }
 
-	/* #hero {
+    /* #hero {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
