@@ -4,16 +4,27 @@ import Header from './Header.astro';
 import DealCard from './DealCard.astro';
 ---
 
-<div id="container">
+<div id="container" class="flex-col">
     <Header />
-    <main>
+    <main class="flex-col">
         <section id="hero">
-            <p>Your Adventure Awaits</p>
-            <button class="contact-btn">Book your consultation</button>
+            <h1>Your Adventure Awaits</h1>
+            <button class="contact-btn">Get in contact</button>
         </section>
-        <section id="featured-deals">
+        <section id="about-me" class="flex-col">
+            <h2>A little bit about me</h2>
+            <h3>Hi, I'm Hannah</h3>
+            <img src="" alt="" class="profile-img" />
+            <p>
+                Maybe a little bit about you here... Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Voluptas
+            </p>
+            <p>Maybe something about what excites you, or how you can help them</p>
+            <p>Ways for them to contact you or routes for them to book?</p>
+        </section>
+        <!-- <section id="featured-deals">
             <h2>Deals</h2>
-            <!-- <div class="deals-grid">
+            <div class="deals-grid">
 				<article>
 					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
 				</article>
@@ -41,8 +52,8 @@ import DealCard from './DealCard.astro';
 				<article>
 					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
 				</article>
-			</div> -->
-        </section>
+			</div>
+        </section> -->
     </main>
     <footer>
         <h3>Footer</h3>
@@ -53,15 +64,11 @@ import DealCard from './DealCard.astro';
     #container {
         font-family:
             Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-        display: flex;
         flex-grow: 1;
-        flex-direction: column;
         height: 100%;
     }
 
     main {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 2rem 0;
@@ -78,18 +85,27 @@ import DealCard from './DealCard.astro';
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        block-size: 70vb;
+        block-size: 60vb;
         width: 100%;
         background-image: url(../assets/white-cliffs-trimmed.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         margin-top: -2rem;
     }
-    #hero p {
+    #hero h1 {
         font-size: 2rem;
         font-style: italic;
         font-weight: 500;
         background-color: transparent;
+    }
+
+    #about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 3rem 1rem;
+        width: 100%;
     }
 
     #featured-deals {
