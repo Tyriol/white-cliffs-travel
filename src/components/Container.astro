@@ -1,0 +1,195 @@
+---
+import whiteCliffsPlaceholder from '../assets/white-cliffs.jpg';
+import Header from './Header.astro';
+import DealCard from './DealCard.astro';
+---
+
+<div id="container" class="flex-col">
+    <Header />
+    <main class="flex-col">
+        <section id="hero">
+            <h1>Your Adventure Awaits</h1>
+            <button class="contact-btn">Get in contact</button>
+        </section>
+        <section id="about-me" class="flex-col">
+            <h2>A little bit about me</h2>
+            <h3>Hi, I'm Hannah</h3>
+            <img src="" alt="" class="profile-img" />
+            <p>
+                Maybe a little bit about you here... Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Voluptas
+            </p>
+            <p>Maybe something about what excites you, or how you can help them</p>
+            <p>Ways for them to contact you or routes for them to book?</p>
+        </section>
+        <!-- <section id="featured-deals">
+            <h2>Deals</h2>
+            <div class="deals-grid">
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+				<article>
+					<img class="deal-img" src={whiteCliffsPlaceholder.src} alt="White Cliffs" />
+				</article>
+			</div>
+        </section> -->
+    </main>
+    <footer>
+        <h3>Footer</h3>
+    </footer>
+</div>
+
+<style>
+    #container {
+        font-family:
+            Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+        flex-grow: 1;
+        height: 100%;
+    }
+
+    main {
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
+    }
+
+    footer {
+        padding: 0 2rem;
+        background-color: brown;
+    }
+
+    #hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        block-size: 60vb;
+        width: 100%;
+        background-image: url(../assets/white-cliffs-trimmed.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: -2rem;
+    }
+    #hero h1 {
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: 500;
+        background-color: transparent;
+    }
+
+    section#about-me,
+    section#featured-deals {
+        width: min(85ch, 100% - 4rem);
+        margin-inline: auto;
+        padding-block: 3rem;
+    }
+
+    #about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #featured-deals {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ddd5ca;
+    }
+
+    .deals-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 3rem;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+
+    .deals-grid > article {
+        background-color: #fff;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+    }
+
+    .deal-img {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    #links {
+        display: flex;
+        gap: 16px;
+    }
+
+    #links a {
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        color: #111827;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    #links a:hover {
+        color: rgb(78, 80, 86);
+    }
+
+    #links a svg {
+        height: 1em;
+        margin-left: 8px;
+    }
+
+    #links a.button {
+        color: white;
+        background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+        box-shadow:
+            inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+            inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+        border-radius: 10px;
+    }
+
+    #links a.button:hover {
+        color: rgb(230, 230, 230);
+        box-shadow: none;
+    }
+
+    h2 {
+        margin: 0 0 1em;
+        font-weight: 600;
+        background-color: inherit;
+        font-size: 20px;
+    }
+
+    p {
+        color: #4b5563;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.006em;
+        margin: 0;
+    }
+</style>
